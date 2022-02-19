@@ -18,7 +18,7 @@
             <tr align="center">
                 <td>{{$data->id}}</td>
                 <td>{{$data->content}}</td>
-                <td>{{$data->user_id}}</td>
+                <td>{{$data->user->name}} {{$data->user->surname}}</td>
                 <td><a href="{{url('/deletesuggestion',$data->id)}}">Delete</a></td>
 
             </tr>

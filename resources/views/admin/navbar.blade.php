@@ -84,6 +84,15 @@
             </a>
           </li>
           <li class="nav-item menu-items">
+            <a class="nav-link" href="{{url('/copy')}}">
+              <span class="menu-icon">
+                <i class="mdi mdi-library-books"></i>
+              </span>
+              <span class="menu-title">Copy</span>
+            </a>
+          </li>
+
+          <li class="nav-item menu-items">
             <a class="nav-link" href="{{('/reservation')}}">
               <span class="menu-icon">
                 <i class="mdi mdi-table-large"></i>

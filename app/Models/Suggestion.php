@@ -9,4 +9,7 @@ class Suggestion extends Model
 {
     protected $table="suggestion";
     use HasFactory;
+    public function user(){
+        return $this->belongsTo(User::class);
+       }
 }

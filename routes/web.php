@@ -15,16 +15,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/category',[AdminController::class,"category"]);
 Route::get('/deletecat/{id}',[AdminController::class,"deletecategory"]);
 Route::get('/book',[AdminController::class,"book"]);
+Route::get('/copy',[AdminController::class,"copy"]);
+
 Route::get('/deletebook/{id}',[AdminController::class,"deletebook"]);
 Route::get('/user',[AdminController::class,"user"]);
 Route::get('/addcat',[AdminController::class,"addcat"]);
 Route::get('/deleteuser/{id}',[AdminController::class,"deleteuser"]);
 Route::post('/uploadcat',[AdminController::class,"uploadcat"]);
 Route::post('/uploadbook',[AdminController::class,"uploadbook"]);
+Route::post('/uploadcopy',[AdminController::class,"uploadcopy"]);
 Route::get('/suggestion',[AdminController::class,"suggestion"]);
 Route::get('/deletesuggestion/{id}',[AdminController::class,"deletesuggestion"]);
 Route::get('/addbook',[AdminController::class,"addbook"]);
-
+Route::get('/addcopy',[AdminController::class,"addcopy"]);
 Route::get('/', function () {
     return view('admin.adminhome');
 });
