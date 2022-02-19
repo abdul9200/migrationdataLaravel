@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @include("admin.admincss")
+</head>
+<body>
+<div class="container-scroller">
+    @include('admin.navbar')
+    <div style="position:relative;top:60px;right:-60px">
+        <table bgcolor="gray" border=3px>
+            <tr>
+                <th style="padding:30px">Id</th>
+                <th style="padding:30px">text</th>
+                <th style="padding:30px">user</th>
+                <th style="padding:30px">Actions</th>
+            </tr>
+            @foreach($data as $data)
+            <tr align="center">
+                <td>{{$data->id}}</td>
+                <td>{{$data->content}}</td>
+                <td>{{$data->user_id}}</td>
+                <td><a href="{{url('/deletesuggestion',$data->id)}}">Delete</a></td>
+
+            </tr>
+            @endforeach
+    </div>
+</div>
+
+    @include('admin.adminscript')
+</body>
+</html>
